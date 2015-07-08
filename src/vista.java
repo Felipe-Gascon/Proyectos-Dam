@@ -1,0 +1,189 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+
+
+public class vista extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textresult;
+
+	
+	/**
+	 * Create the frame.
+	 */
+	public vista() {
+	String numero1;
+	String numero2;
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 645, 350);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton Multip = new JButton("X");
+		Multip.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(!textresult.getText().equals(" ")){
+					
+					
+					
+				}
+			}
+		});
+		Multip.setBounds(461, 56, 50, 39);
+		contentPane.add(Multip);
+		
+		JButton Suma = new JButton("+");
+		Suma.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				
+			}
+		});
+		Suma.setBounds(400, 111, 50, 39);
+		contentPane.add(Suma);
+		
+		JButton division = new JButton("/");
+		division.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(!textresult.getText().equals(" ")){
+					
+				
+				}
+			}
+		});
+		division.setBounds(461, 159, 50, 39);
+		contentPane.add(division);
+		
+		JButton resta = new JButton("-");
+		resta.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(!textresult.getText().equals(" ")){
+					
+				
+				}
+			}
+		});
+		resta.setBounds(520, 111, 50, 39);
+		contentPane.add(resta);
+	
+		
+		textresult = new JTextField();
+		textresult.setBorder(new LineBorder(Color.BLACK));
+		textresult.setBounds(35, 0, 476, 22);
+		contentPane.add(textresult);
+		textresult.setColumns(10);
+		
+		JButton Btn1 = new JButton("1");
+		Btn1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				textresult.setText(textresult.getText()+"1");
+			}
+		});
+		Btn1.setBounds(10, 44, 39, 39);
+		contentPane.add(Btn1);
+		
+		JButton btn2 = new JButton("2");
+		btn2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textresult.setText(textresult.getText()+"2");
+			}
+		});
+		btn2.setBounds(71, 44, 39, 39);
+		contentPane.add(btn2);
+		
+		JButton btn3 = new JButton("3");
+		btn3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textresult.setText(textresult.getText()+"3");
+
+			}
+		});
+		btn3.setBounds(134, 44, 39, 39);
+		contentPane.add(btn3);
+		
+		JButton btn4 = new JButton("4");
+		btn4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textresult.setText(textresult.getText()+"4");
+			}
+		});
+		btn4.setBounds(10, 95, 39, 39);
+		contentPane.add(btn4);
+		
+		JButton btn5 = new JButton("5");
+		btn5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textresult.setText(textresult.getText()+"5");
+			}
+		});
+		btn5.setBounds(71, 95, 39, 39);
+		contentPane.add(btn5);
+		
+		JButton btn6 = new JButton("6");
+		btn6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textresult.setText(textresult.getText()+"6");
+			}
+		}); 
+		btn6.setBounds(134, 95, 39, 39);
+		contentPane.add(btn6);
+		
+		JButton btn7 = new JButton("7");
+		btn7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textresult.setText(textresult.getText()+"7");
+			}
+		});
+		btn7.setBounds(10, 146, 39, 39);
+		contentPane.add(btn7);
+		
+		JButton btn8 = new JButton("8");
+		btn8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textresult.setText(textresult.getText()+"8");
+			}
+		});
+		btn8.setBounds(71, 146, 39, 39);
+		contentPane.add(btn8);
+		
+		JButton btn9 = new JButton("9");
+		btn9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textresult.setText(textresult.getText()+"9");
+			}
+		});
+		btn9.setBounds(134, 145, 39, 39);
+		contentPane.add(btn9);
+		
+		JButton Borra = new JButton("C");
+		Borra.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textresult.setText(" ");
+			}
+		});
+		Borra.setBounds(35, 191, 39, 39);
+		contentPane.add(Borra);
+		
+		JButton btn0 = new JButton("0");
+		btn0.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			textresult.setText(textresult.getText()+"0");
+			}
+		});
+		btn0.setBounds(104, 191, 39, 39);
+		contentPane.add(btn0);
+	}
+}
