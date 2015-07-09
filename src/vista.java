@@ -17,14 +17,14 @@ public class vista extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField textresult;
-
-	
+	private  String numero1;
+	private String signo;
 	/**
 	 * Create the frame.
 	 */
 	public vista() {
-	String numero1;
-	String numero2;
+
+	
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 645, 350);
 		contentPane = new JPanel();
@@ -36,8 +36,11 @@ public class vista extends JFrame {
 		Multip.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!textresult.getText().equals(" ")){
-					
-					
+					String numero1=" ";
+					String signo="";
+					numero1=textresult.getText();
+					signo="*";
+					textresult.setText("");
 					
 				}
 			}
@@ -89,7 +92,8 @@ public class vista extends JFrame {
 		JButton Btn1 = new JButton("1");
 		Btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				textresult.setText(textresult.getText()+"1");
+				numero1+="1";
+				textresult.setText(numero1);
 			}
 		});
 		Btn1.setBounds(10, 44, 39, 39);
@@ -98,7 +102,8 @@ public class vista extends JFrame {
 		JButton btn2 = new JButton("2");
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textresult.setText(textresult.getText()+"2");
+				numero1+="2";
+				textresult.setText(numero1);
 			}
 		});
 		btn2.setBounds(71, 44, 39, 39);
@@ -107,8 +112,8 @@ public class vista extends JFrame {
 		JButton btn3 = new JButton("3");
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textresult.setText(textresult.getText()+"3");
-
+				numero1+="3";
+				textresult.setText(numero1);
 			}
 		});
 		btn3.setBounds(134, 44, 39, 39);
@@ -117,8 +122,8 @@ public class vista extends JFrame {
 		JButton btn4 = new JButton("4");
 		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textresult.setText(textresult.getText()+"4");
-			}
+				numero1+="4";
+				textresult.setText(numero1);			}
 		});
 		btn4.setBounds(10, 95, 39, 39);
 		contentPane.add(btn4);
@@ -126,8 +131,8 @@ public class vista extends JFrame {
 		JButton btn5 = new JButton("5");
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textresult.setText(textresult.getText()+"5");
-			}
+				numero1+="5";
+				textresult.setText(numero1);			}
 		});
 		btn5.setBounds(71, 95, 39, 39);
 		contentPane.add(btn5);
