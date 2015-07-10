@@ -36,7 +36,7 @@ public class vista extends JFrame {
 		Multip.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!textresult.getText().equals(" ")){
-					String numero1=" ";
+					String numero1="";
 					String signo="";
 					numero1=textresult.getText();
 					signo="*";
@@ -92,85 +92,88 @@ public class vista extends JFrame {
 		JButton Btn1 = new JButton("1");
 		Btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				numero1+="1";
+				numero1="1";
 				textresult.setText(numero1);
 			}
 		});
-		Btn1.setBounds(10, 44, 39, 39);
+		Btn1.setBounds(10, 44, 51, 39);
 		contentPane.add(Btn1);
 		
 		JButton btn2 = new JButton("2");
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				numero1+="2";
+				numero1="2";
 				textresult.setText(numero1);
 			}
 		});
-		btn2.setBounds(71, 44, 39, 39);
+		btn2.setBounds(71, 44, 53, 39);
 		contentPane.add(btn2);
 		
 		JButton btn3 = new JButton("3");
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				numero1+="3";
+				numero1="3";
 				textresult.setText(numero1);
 			}
 		});
-		btn3.setBounds(134, 44, 39, 39);
+		btn3.setBounds(134, 44, 50, 39);
 		contentPane.add(btn3);
 		
 		JButton btn4 = new JButton("4");
 		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				numero1+="4";
+				numero1="4";
 				textresult.setText(numero1);			}
 		});
-		btn4.setBounds(10, 95, 39, 39);
+		btn4.setBounds(10, 95, 51, 39);
 		contentPane.add(btn4);
 		
 		JButton btn5 = new JButton("5");
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				numero1+="5";
+				numero1="5";
 				textresult.setText(numero1);			}
 		});
-		btn5.setBounds(71, 95, 39, 39);
+		btn5.setBounds(71, 95, 53, 39);
 		contentPane.add(btn5);
 		
 		JButton btn6 = new JButton("6");
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textresult.setText(textresult.getText()+"6");
+				numero1="6";
+				textresult.setText(numero1);
 			}
 		}); 
-		btn6.setBounds(134, 95, 39, 39);
+		btn6.setBounds(134, 95, 50, 39);
 		contentPane.add(btn6);
 		
 		JButton btn7 = new JButton("7");
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textresult.setText(textresult.getText()+"7");
+				numero1="7";
+				textresult.setText(numero1);
 			}
 		});
-		btn7.setBounds(10, 146, 39, 39);
+		btn7.setBounds(10, 146, 51, 39);
 		contentPane.add(btn7);
 		
 		JButton btn8 = new JButton("8");
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textresult.setText(textresult.getText()+"8");
+				numero1="8";
+				textresult.setText(numero1);
 			}
 		});
-		btn8.setBounds(71, 146, 39, 39);
+		btn8.setBounds(71, 146, 53, 39);
 		contentPane.add(btn8);
 		
 		JButton btn9 = new JButton("9");
 		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textresult.setText(textresult.getText()+"9");
-			}
+				numero1="9";
+				textresult.setText(numero1);			}
 		});
-		btn9.setBounds(134, 145, 39, 39);
+		btn9.setBounds(134, 145, 50, 39);
 		contentPane.add(btn9);
 		
 		JButton Borra = new JButton("C");
@@ -179,16 +182,25 @@ public class vista extends JFrame {
 				textresult.setText(" ");
 			}
 		});
-		Borra.setBounds(35, 191, 39, 39);
+		Borra.setBounds(35, 191, 50, 39);
 		contentPane.add(Borra);
 		
 		JButton btn0 = new JButton("0");
 		btn0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			textresult.setText(textresult.getText()+"0");
+				numero1="0";
+				textresult.setText(numero1);
 			}
 		});
-		btn0.setBounds(104, 191, 39, 39);
+		btn0.setBounds(104, 191, 50, 39);
 		contentPane.add(btn0);
+		
+		JButton igual = new JButton("=");
+		igual.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		igual.setBounds(461, 111, 50, 39);
+		contentPane.add(igual);
 	}
 }
