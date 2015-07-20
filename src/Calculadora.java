@@ -3,7 +3,8 @@ public class Calculadora {
 
 
 	public static void main(String[] args) {
-		new vista().setVisible(true);
+		Vista vista = new Vista();
+		vista.setVisible(true);
 
 	}
 
