@@ -30,7 +30,6 @@ public class Vista extends JFrame {
 	 * Create the frame.
 	 */
 	public Vista() {
-		//Resultado=input.setText(numeroConcat);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 349, 390);
 		contentPane = new JPanel();
@@ -90,7 +89,7 @@ public class Vista extends JFrame {
 					signo = "-";
 					input.setText("");
 
-				}//HOLASADASD
+				}
 			}
 		});
 		resta.setBounds(192, 253, 50, 39);
@@ -99,9 +98,12 @@ public class Vista extends JFrame {
 		JButton btn1 = new JButton("1");
 		btn1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if(input.getText().equals("borra"));
-				input.setText(input.getText()+"1");
-			
+				if(input.getText().equals("0")){
+					input.setText("1");
+				}
+				else{
+					input.setText(input.getText()+"1");
+				}
 					
 			}
 		});
@@ -111,7 +113,12 @@ public class Vista extends JFrame {
 		JButton btn2 = new JButton("2");
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				input.setText(input.getText()+"2");
+				if(input.getText().equals("0")){
+					input.setText("2");
+				}
+				else{
+					input.setText(input.getText()+"2");
+				}
 
 			}
 		});
@@ -121,7 +128,12 @@ public class Vista extends JFrame {
 		JButton btn3 = new JButton("3");
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
-				input.setText(input.getText()+"3");
+				if(input.getText().equals("0")){
+					input.setText("3");
+				}
+				else{
+					input.setText(input.getText()+"3");
+				}
 
 			}
 		});
@@ -131,7 +143,12 @@ public class Vista extends JFrame {
 		JButton btn4 = new JButton("4");
 		btn4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				input.setText(input.getText()+"4");
+				if(input.getText().equals("0")){
+					input.setText("4");
+				}
+				else{
+					input.setText(input.getText()+"4");
+				}
 
 			}
 		});
@@ -141,8 +158,12 @@ public class Vista extends JFrame {
 		JButton btn5 = new JButton("5");
 		btn5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				input.setText(input.getText()+"5");
-
+				if(input.getText().equals("0")){
+					input.setText("5");
+				}
+				else{
+					input.setText(input.getText()+"5");
+				}
 			}
 		});
 		btn5.setBounds(71, 203, 53, 39);
@@ -151,8 +172,13 @@ public class Vista extends JFrame {
 		JButton btn6 = new JButton("6");
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(input.getText().equals("0")){
+					input.setText("6");
+				}
+				else{
+					input.setText(input.getText()+"6");
 
-				input.setText(input.getText()+"6");
+				}
 
 			}
 		}); 
@@ -162,8 +188,12 @@ public class Vista extends JFrame {
 		JButton btn7 = new JButton("7");
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				input.setText(input.getText()+"7");
-
+				if(input.getText().equals("0")){
+					input.setText("7");
+				}
+				else{
+					input.setText(input.getText()+"7");
+				}
 			}
 		});
 		btn7.setBounds(10, 159, 51, 39);
@@ -172,7 +202,12 @@ public class Vista extends JFrame {
 		JButton btn8 = new JButton("8");
 		btn8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				input.setText(input.getText()+"8");
+				if(input.getText().equals("0")){
+					input.setText("8");
+				}
+				else{
+					input.setText(input.getText()+"8");
+				}
 
 			}
 		});
@@ -182,9 +217,13 @@ public class Vista extends JFrame {
 		JButton btn9 = new JButton("9");
 		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if(input.equals("0") && borra.isSelected()){
-				input.setText(input.getText()+"9");
+				
+				if(input.getText().equals("0")){
+					input.setText("9");
 				}
+				else{
+					input.setText(input.getText()+"9");
+				}			
 			}
 		});
 		btn9.setBounds(134, 159, 50, 39);
@@ -299,6 +338,7 @@ public class Vista extends JFrame {
 		contentPane.add(button_5);
 
 		input = new JTextField();
+		input.setText("0");
 		input.setBounds(10, 11, 292, 39);
 		contentPane.add(input);
 		input.setColumns(10);
