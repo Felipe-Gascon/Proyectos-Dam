@@ -25,7 +25,7 @@ public class Vista extends JFrame {
 	private String memoria1;
 	private String signo;
 	private String memoria2;
-	private JButton boton;
+	private String memoria3;
 	/**
 	 * Create the frame.
 	 */
@@ -246,29 +246,32 @@ public class Vista extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				String resultado;
 				String memoria2=input.getText();
-				if (!memoria2.equals("")){
-					resultado=calculadora(memoria1,memoria2,signo);
+				String memoria3=input.getText();
+				if (!memoria2.equals("")&& !memoria3.equals("")){
+					resultado=calculadora(memoria1,memoria2,memoria3,signo);
 					input.setText(resultado);
 				}
 
 			}
 
-			public String calculadora(String memoria1, String memoria2,String signo) {
+			public String calculadora(String memoria1, String memoria2,String memoria3,String signo) {
 				Double resultado =0.0;
 				String respuesta;
+				
+				
 				if (signo.equals("-")){
-					resultado=Double.parseDouble(memoria1)-Double.parseDouble(memoria2);
+					resultado=Double.parseDouble(memoria1)-Double.parseDouble(memoria2)-Double.parseDouble(memoria3);
 				}
 				if (signo.equals("+")){
-					resultado=Double.parseDouble(memoria1)+Double.parseDouble(memoria2);
+					resultado=Double.parseDouble(memoria1)+Double.parseDouble(memoria2)+Double.parseDouble(memoria3);
 
 				}
 				if (signo.equals("*")){
-					resultado=Double.parseDouble(memoria1)*Double.parseDouble(memoria2);
+					resultado=Double.parseDouble(memoria1)*Double.parseDouble(memoria2)*Double.parseDouble(memoria3);
 
 				}
 				if (signo.equals("/")){
-					resultado=Double.parseDouble(memoria1)/Double.parseDouble(memoria2);
+					resultado=Double.parseDouble(memoria1)/Double.parseDouble(memoria2)/Double.parseDouble(memoria3);
 				}
 				respuesta=resultado.toString();
 				return respuesta;
