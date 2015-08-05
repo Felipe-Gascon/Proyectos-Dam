@@ -244,34 +244,46 @@ public class Vista extends JFrame {
 		JButton igual = new JButton("=");
 		igual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				
 				String resultado;
 				String memoria2=input.getText();
 				String memoria3=input.getText();
-				if (!memoria2.equals("")&& !memoria3.equals("")){
-					resultado=calculadora(memoria1,memoria2,memoria3,signo);
-					input.setText(resultado);
-				}
+				int contador = 99;
+				while(true){
 
+
+
+					if (!memoria2.equals("")){
+						resultado=calculadora(memoria1,memoria2,signo);
+						input.setText(resultado);
+
+
+					}break;
+				}
 			}
 
-			public String calculadora(String memoria1, String memoria2,String memoria3,String signo) {
+
+
+			public String calculadora(String memoria1, String memoria2,String signo) {
 				Double resultado =0.0;
 				String respuesta;
+
 				
 				
+
 				if (signo.equals("-")){
-					resultado=Double.parseDouble(memoria1)-Double.parseDouble(memoria2)-Double.parseDouble(memoria3);
+					resultado=Double.parseDouble(memoria1)-Double.parseDouble(memoria2);
 				}
-				if (signo.equals("+")){
-					resultado=Double.parseDouble(memoria1)+Double.parseDouble(memoria2)+Double.parseDouble(memoria3);
+				else if (signo.equals("+")){
+					resultado=Double.parseDouble(memoria1)+Double.parseDouble(memoria2);
 
 				}
-				if (signo.equals("*")){
-					resultado=Double.parseDouble(memoria1)*Double.parseDouble(memoria2)*Double.parseDouble(memoria3);
+				else if (signo.equals("*")){
+					resultado=Double.parseDouble(memoria1)*Double.parseDouble(memoria2);
 
 				}
-				if (signo.equals("/")){
-					resultado=Double.parseDouble(memoria1)/Double.parseDouble(memoria2)/Double.parseDouble(memoria3);
+				else if (signo.equals("/")){
+					resultado=Double.parseDouble(memoria1)/Double.parseDouble(memoria2);
 				}
 				respuesta=resultado.toString();
 				return respuesta;
@@ -279,6 +291,7 @@ public class Vista extends JFrame {
 
 			}
 		});
+		
 		igual.setBounds(252, 203, 50, 139);
 		contentPane.add(igual);
 
