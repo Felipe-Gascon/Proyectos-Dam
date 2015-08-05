@@ -249,8 +249,7 @@ public class Vista extends JFrame {
 				String memoria2=input.getText();
 				String memoria3=input.getText();
 				int contador = 99;
-				while(true){
-
+				
 
 
 					if (!memoria2.equals("")){
@@ -258,7 +257,7 @@ public class Vista extends JFrame {
 						input.setText(resultado);
 
 
-					}break;
+					
 				}
 			}
 
