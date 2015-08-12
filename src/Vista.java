@@ -65,10 +65,11 @@ public class Vista extends JFrame {
 		JButton Suma = new JButton("+");
 		Suma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				
 				memoria1=input.getText();
 				signo = "+";
 				input.setText("");
+			
 			}
 		});
 		Suma.setBounds(192, 303, 50, 39);
@@ -104,12 +105,12 @@ public class Vista extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(input.getText().equals("0")){
 					input.setText("1");
-					
+					memoria3=btn1.getText();
 				}
 				else{
 					input.setText(input.getText()+"1");
 				}
-					memoria3=btn1.getText();
+					
 					System.out.println(memoria3);
 			}
 
@@ -195,8 +196,9 @@ public class Vista extends JFrame {
 					input.setText("6");
 				}
 				else{
-					input.setText(input.getText()+"6");
 					memoria3=btn6.getText();
+					input.setText(input.getText()+"6");
+					
 
 				}
 
@@ -204,7 +206,7 @@ public class Vista extends JFrame {
 		}); 
 		btn6.setBounds(134, 202, 50, 39);
 		contentPane.add(btn6);
-
+	
 		JButton btn7 = new JButton("7");
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -276,15 +278,15 @@ public class Vista extends JFrame {
 			public void actionPerformed(ActionEvent arg0) {
 				
 				String resultado;
-				String memoria2=input.getText();
-				
-
+				 memoria2=input.getText();
+				String cadena;
+				cadena=input.getText();
 					
-					if (!memoria2.equals("")&&!memoria3.equals("")){
+					if (!memoria2.equals("")){
 						respuesta=calculadora(memoria1,memoria2,memoria3,signo);
 						
 						input.setText(respuesta);
-						System.out.println(respuesta);
+						//System.out.println(respuesta);
 
 					
 				}
