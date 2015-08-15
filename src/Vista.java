@@ -22,18 +22,17 @@ public class Vista extends JFrame {
 
 	private int contador;
 	private JTextField input;
-	private String memoria1;
+	private String primerNum;
 	private String signo;
-	private String memoria2;
-	private String memoria3;
-	private String memoria4;
-	
+	private String segundoNum;
+	private String tercerNum;
+
 	private String respuesta;
 	/**
 	 * Create the frame.
 	 */
 	public Vista() {
-		
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 349, 390);
 		contentPane = new JPanel();
@@ -45,7 +44,7 @@ public class Vista extends JFrame {
 		multip.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
-				memoria1=input.getText();
+				primerNum=input.getText();
 				signo = "*";
 				input.setText("");
 			}
@@ -55,7 +54,7 @@ public class Vista extends JFrame {
 		JButton borra = new JButton("C");
 		borra.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 
+
 				input.setText("0");
 			}
 		});
@@ -65,11 +64,11 @@ public class Vista extends JFrame {
 		JButton Suma = new JButton("+");
 		Suma.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				memoria1=input.getText();
+
+				primerNum=input.getText();
 				signo = "+";
 				input.setText("");
-			
+
 			}
 		});
 		Suma.setBounds(192, 303, 50, 39);
@@ -78,7 +77,7 @@ public class Vista extends JFrame {
 		JButton division = new JButton("/");
 		division.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				memoria1=input.getText();
+				primerNum=input.getText();
 				signo = "/";
 				input.setText("");
 			}
@@ -90,7 +89,7 @@ public class Vista extends JFrame {
 		resta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(!input.getText().equals(" ")){
-					memoria1=input.getText();
+					primerNum=input.getText();
 					signo = "-";
 					input.setText("");
 
@@ -105,20 +104,20 @@ public class Vista extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(input.getText().equals("0")){
 					input.setText("1");
-					memoria3=btn1.getText();
+					tercerNum=btn1.getText();
 				}
 				else{
 					input.setText(input.getText()+"1");
 				}
-					
-					System.out.println(memoria3);
+
+				System.out.println(tercerNum);
 			}
 
 		});
 		btn1.setBounds(10, 253, 51, 39);
 		contentPane.add(btn1);
-		
-			
+
+
 		JButton btn2 = new JButton("2");
 		btn2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -128,33 +127,33 @@ public class Vista extends JFrame {
 				else{
 					input.setText(input.getText()+"2");
 				}
-				memoria3=btn2.getText();
-				System.out.println(memoria3);
+				tercerNum=btn2.getText();
+				System.out.println(tercerNum);
 
 			}
 		});
 		btn2.setBounds(71, 253, 53, 39);
 		contentPane.add(btn2);
-		
-		
+
+
 		JButton btn3 = new JButton("3");
 		btn3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e){
 				if(input.getText().equals("0")){
 					input.setText("3");
-					memoria3=btn3.getText();
+					tercerNum=btn3.getText();
 				}
 				else{
 					input.setText(input.getText()+"3");
-					memoria3=btn3.getText();
+					tercerNum=btn3.getText();
 
 				}
-				
+
 			}
 		});
 		btn3.setBounds(134, 253, 50, 39);
 		contentPane.add(btn3);
-		
+
 
 		JButton btn4 = new JButton("4");
 		btn4.addActionListener(new ActionListener() {
@@ -164,7 +163,7 @@ public class Vista extends JFrame {
 				}
 				else{
 					input.setText(input.getText()+"4");
-					memoria3=btn4.getText();
+					tercerNum=btn4.getText();
 
 				}
 
@@ -181,14 +180,14 @@ public class Vista extends JFrame {
 				}
 				else{
 					input.setText(input.getText()+"5");
-					memoria3=btn5.getText();
+					tercerNum=btn5.getText();
 
 				}
 			}
 		});
 		btn5.setBounds(71, 203, 53, 39);
 		contentPane.add(btn5);
-		
+
 		JButton btn6 = new JButton("6");
 		btn6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -196,9 +195,9 @@ public class Vista extends JFrame {
 					input.setText("6");
 				}
 				else{
-					memoria3=btn6.getText();
+					tercerNum=btn6.getText();
 					input.setText(input.getText()+"6");
-					
+
 
 				}
 
@@ -206,7 +205,7 @@ public class Vista extends JFrame {
 		}); 
 		btn6.setBounds(134, 202, 50, 39);
 		contentPane.add(btn6);
-	
+
 		JButton btn7 = new JButton("7");
 		btn7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -215,7 +214,7 @@ public class Vista extends JFrame {
 				}
 				else{
 					input.setText(input.getText()+"7");
-					memoria3=btn7.getText();
+					tercerNum=btn7.getText();
 
 				}
 			}
@@ -231,105 +230,105 @@ public class Vista extends JFrame {
 				}
 				else{
 					input.setText(input.getText()+"8");
-					memoria3=btn8.getText();
+					tercerNum=btn8.getText();
 
 				}
-				
+
 			}
 		});
 		btn8.setBounds(71, 159, 53, 39);
 		contentPane.add(btn8);
-		
-	
+
+
 		JButton btn9 = new JButton("9");
 		btn9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				if(input.getText().equals("0")){
 					input.setText("9");
 				}
 				else{
 					input.setText(input.getText()+"9");
-					memoria3=btn9.getText();
+					tercerNum=btn9.getText();
 
 				}			
 			}
 		});
 		btn9.setBounds(134, 159, 50, 39);
 		contentPane.add(btn9);
-	
+
 		JButton btn0 = new JButton("0");
 		btn0.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				input.setText(input.getText()+"0");
-				memoria3=btn0.getText();
+				tercerNum=btn0.getText();
 
 			}
 		});
 		btn0.setBounds(10, 303, 172, 39);
 		contentPane.add(btn0);
-		
-		
-		
-		
+
+
+
+
 
 		JButton igual = new JButton("=");
 		igual.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
-				String resultado;
-				 memoria2=input.getText();
-				String cadena;
-				cadena=input.getText();
-					
-					if (!memoria2.equals("")){
-						respuesta=calculadora(memoria1,memoria2,memoria3,signo);
-						
-						input.setText(respuesta);
-						//System.out.println(respuesta);
 
-					
+				String resultado;
+				segundoNum=input.getText();
+
+
+
+				if (!segundoNum.equals("")){
+					respuesta=calculadora(primerNum,segundoNum,signo);
+
+					input.setText(respuesta);
+					//System.out.println(respuesta);
+
+
 				}
 			}
 
 
 
-			public String calculadora(String memoria1, String memoria2,String memoria3, String signo) {
+			public String calculadora(String primerNum, String segundoNum, String signo) {
 				Double resultado =0.0;
 				String respuesta;
 
-				
-				
+
+
 
 				if (signo.equals("-")){
-					resultado=Double.parseDouble(memoria1)-Double.parseDouble(memoria2)-Double.parseDouble(memoria3);
+					resultado=Double.parseDouble(primerNum)-Double.parseDouble(segundoNum);
 				}
 				else if (signo.equals("+")){
-					resultado=Double.parseDouble(memoria1)+Double.parseDouble(memoria2)+Double.parseDouble(memoria3);
+					resultado=Double.parseDouble(primerNum)+Double.parseDouble(segundoNum);
 
 				}
 				else if (signo.equals("*")){
-					resultado=Double.parseDouble(memoria1)*Double.parseDouble(memoria2)*Double.parseDouble(memoria3);
+					resultado=Double.parseDouble(primerNum)*Double.parseDouble(segundoNum);
 
 				}
-				
+
 				else if (signo.equals("/")){
-					resultado=Double.parseDouble(memoria1)/Double.parseDouble(memoria2)/Double.parseDouble(memoria3);
+					resultado=Double.parseDouble(primerNum)/Double.parseDouble(segundoNum);
 				}
 				respuesta=resultado.toString();
 				return respuesta;
 
-//resultado se converitiria en memoria1
+				//resultado se converitiria en primerNum
 				//guardar el resultado en una variable al final, no hace falta while ni dnada
 				//el resultado se tiene que guardar en una variable fuera del action listener
 				//las variables principales tengo que guardarlas fuera del listener
 			}
 		});
-		
-		
+
+
 		igual.setBounds(252, 203, 50, 139);
 		contentPane.add(igual);
-		
+
 
 
 		JButton button = new JButton("CE");
@@ -393,7 +392,7 @@ public class Vista extends JFrame {
 		input.setBounds(10, 11, 292, 39);
 		contentPane.add(input);
 		input.setColumns(10);
- 
-		
+
+
 	}
 }
