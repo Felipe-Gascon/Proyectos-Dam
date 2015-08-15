@@ -107,10 +107,11 @@ public class Vista extends JFrame {
 					tercerNum=btn1.getText();
 				}
 				else{
+					System.out.println(tercerNum);
 					input.setText(input.getText()+"1");
 				}
 					
-					System.out.println(tercerNum);
+					
 			}
 
 		});
@@ -123,12 +124,14 @@ public class Vista extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(input.getText().equals("0")){
 					input.setText("2");
+					tercerNum=btn2.getText();
 				}
 				else{
 					input.setText(input.getText()+"2");
+					System.out.println(tercerNum);
 				}
-				tercerNum=btn2.getText();
-				System.out.println(tercerNum);
+			
+				
 
 			}
 		});
@@ -145,7 +148,7 @@ public class Vista extends JFrame {
 				}
 				else{
 					input.setText(input.getText()+"3");
-					tercerNum=btn3.getText();
+					
 
 				}
 				
@@ -160,10 +163,11 @@ public class Vista extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(input.getText().equals("0")){
 					input.setText("4");
+					tercerNum=btn4.getText();
+
 				}
 				else{
 					input.setText(input.getText()+"4");
-					tercerNum=btn4.getText();
 
 				}
 
@@ -177,10 +181,11 @@ public class Vista extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if(input.getText().equals("0")){
 					input.setText("5");
+					tercerNum=btn5.getText();
 				}
 				else{
 					input.setText(input.getText()+"5");
-					tercerNum=btn5.getText();
+					
 
 				}
 			}
@@ -282,7 +287,7 @@ public class Vista extends JFrame {
 				
 					
 					if (!segundoNum.equals("")){
-						respuesta=calculadora(primerNum,segundoNum,tercerNum,signo);
+						respuesta=calculadora(primerNum,segundoNum,signo);
 						
 						input.setText(respuesta);
 						//System.out.println(respuesta);
@@ -292,31 +297,33 @@ public class Vista extends JFrame {
 			}
 
 
-
-			public String calculadora(String primerNum, String segundoNum,String tercerNum, String signo) {
-				Double resultado =0.0;
-				String respuesta;
-
-				
-				
-
-				if (signo.equals("-")){
-					resultado=Double.parseDouble(primerNum)-Double.parseDouble(segundoNum)-Double.parseDouble(tercerNum);
-				}
-				else if (signo.equals("+")){
-					resultado=Double.parseDouble(primerNum)+Double.parseDouble(segundoNum)+Double.parseDouble(tercerNum);
  
-				}
-				else if (signo.equals("*")){
-					resultado=Double.parseDouble(primerNum)*Double.parseDouble(segundoNum)*Double.parseDouble(tercerNum);
+	
+			public String calculadora(String primerNum, String segundoNum,String signo) {
+ 				Double resultado =0.0;
+ 				String respuesta;
+			
+			
+ 				if (signo.equals("-")){
+					
+				resultado=Double.parseDouble(primerNum)-Double.parseDouble(segundoNum);
+ 				}
+ 				if (signo.equals("+")){
 
-				}
-				
-				else if (signo.equals("/")){
-					resultado=Double.parseDouble(primerNum)/Double.parseDouble(segundoNum)/Double.parseDouble(tercerNum);
-				}
-				respuesta=resultado.toString();
-				return respuesta;
+				resultado=Double.parseDouble(primerNum)+Double.parseDouble(segundoNum);
+ 
+ 				}
+ 				if (signo.equals("*")){
+			
+					resultado=Double.parseDouble(primerNum)*Double.parseDouble(segundoNum);
+ 
+ 				}
+ 				if (signo.equals("/")){
+
+				resultado=Double.parseDouble(primerNum)/Double.parseDouble(segundoNum);
+ 				}
+ 				respuesta=resultado.toString();
+ 				return respuesta;
 
 //resultado se converitiria en primerNum
 				//guardar el resultado en una variable al final, no hace falta while ni dnada
@@ -329,7 +336,7 @@ public class Vista extends JFrame {
 		igual.setBounds(252, 203, 50, 139);
 		contentPane.add(igual);
 		
-
+System.out.println(tercerNum);
 
 		JButton button = new JButton("CE");
 		button.addActionListener(new ActionListener() {
